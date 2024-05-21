@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejemplo2</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div id="contenedor">
+        <h3>2.	Diseñe un algoritmo para obtener el grado de eficiencia de un operario de una fábrica de tornillos, de acuerdo a las siguientes condiciones, que se le imponen para un período de prueba: </h3>
+        <div id="resultado">
+            <script>
+
+                //1. Declaracion de variables//
+                var grado,tornillod,tornillosp
+           
+            
+                //2. Fase entrada/lectura de datos//
+                tornillod=(parseInt(prompt("INGRESA NUMERO DE TORNILLOS DEFECTUOSOS")));
+                tornillosp=(parseInt(prompt("INGRESAR NUMERO DE TORNILLOS PRODUCIDOS")));
+                
+                 //3. Fase del procesamiento de datos//
+                if (tornillosp < 200 && tornillosp > 10000) {
+                    grado=8;
+                } else {
+                    if (tornillosp > 10000) {
+                        grado=7;
+                    } else {
+                        if (tornillod < 200) {
+                            grado=6;
+                        } else {
+                            grado=5;
+                        }
+                    }
+                }
+                //4. FASE DE SALIDA//
+                document.write("EL GRADO DE TORNILLOS ES:" + grado +"<br>");
+                document.write("EL NUMERO DE TORNILLOS DEFECTUOSOS ES: "+ tornillod +"<br>");
+                document.write("EL NUMERO DE TORNILLOS PRODUCIDOS ES: "+ tornillosp);
+
+            </script>
+        </div>
+    </div>
+    
+</body>
+</html>
